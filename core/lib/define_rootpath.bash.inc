@@ -12,7 +12,7 @@ define_rootpath() {
 
     # 'shcf' or '-' means, relative to ShSDK root
     # non-shcf, it's relative to 'project' dir
-    if [[ "$projname" =~ shcf|- ]]; then
+    if [[ "$projname" =~ (shcf|-)$ ]]; then
        retval=$SHCF_PLATFORM_ROOT
     else
        retval=$($DIRNAME_BIN $SHCF_PLATFORM_ROOT)/projects/$project
